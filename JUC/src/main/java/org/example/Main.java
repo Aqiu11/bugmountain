@@ -52,7 +52,7 @@ public class Main {
 }
 
 class print{
-    private  int printNum = 0;
+    private  int printNum = 11;
     private  int printZiMu = 65;
     private  int flag = 1; // 1表示打印数字 2 表示打印字母
     private Lock lock = new ReentrantLock();
