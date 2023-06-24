@@ -1,0 +1,12 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.pojo
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: abc123
+    url: jdbc:mysql://localhost:3306/clouddemo?serverTimezone=Asia/Shanghai
+    username: root
+server:
+  port: 8081
+

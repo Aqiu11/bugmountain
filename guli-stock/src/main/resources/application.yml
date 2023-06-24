@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: guli-stock
+# 引入数据库依赖后 DataSourceAutoConfiguration自动配置类会初始化数据库连接池对象添加到容器中
+  datasource:
+    url: jdbc:mysql://localhost:3306/guli_stock?useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+  sleuth:
+    sampler:
+      probability: 1.0
+
+eureka:
+  instance:
+    # 在注册中心中 会显示当前服务的ip地址
+    prefer-ip-address: true
+    ip-address: localhost
+  client:
+    # 要注册的注册中心地址:必须和eureka-server注册中心地址一样
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
